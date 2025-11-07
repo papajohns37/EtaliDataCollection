@@ -1,7 +1,11 @@
 # Etali Data Collection
 Welcome to my cEDH data collection tool. Currently, I am using this to gather data on the odds of casting Etali, Primal Conqueror by turn 2 in my list. The goal of this testing is to optimize my decklist and build a mulligan guide to share with the community. If you are interested in mathematically analyzing Magic: the Gathering decks or helping with this tool, reach out to me on Discord: @thepapajohns
 ## Setup
-To use this tool, you will first need to have Google Chrome installed on your machine. Then download the executable in this repository. To save data to a Google Sheet, you will need a credentials file to log in to Google. Reach out to me for the service account credentials and place the file I send you into the same folder as the executable. Now you will be able to run the executable and start testing hands!
+1. Install Google Chrome (The tool opens chrome to moxfield, other browsers are not supported currently)
+2. Download the executable
+3. Contact me to get the Google credentials file and place it in the same directory as the executable
+4. Run the executable (you will be told it is from an unknown publisher, select more info, then run anyway to start the program [Source code is provided if you are concerned about what the program does])
+5. Start testing hands!
 ## Using This Tool
 First, you should be prompted to enter your Discord username. This is optional, but it allows me to credit users for their contributions. If you choose not to use your Discord name, feel free to enter some other unique identifier so that I can distinguish which data was submitted by the same user.
 
