@@ -3,7 +3,7 @@ Welcome to my cEDH data collection tool. Currently, I am using this to gather da
 ## Setup
 1. Install Google Chrome (The tool opens chrome to moxfield, other browsers are not supported currently)
 2. Download the executable
-3. Contact me to get the Google credentials file and place it in the same directory as the executable
+3. Contact me to get the Google Sheets service account credentials file and place it in the same directory as the executable
 4. Run the executable (you will be told it is from an unknown publisher, select more info, then run anyway to start the program [Source code is provided if you are concerned about what the program does])
 5. Start testing hands!
 ## Using This Tool
