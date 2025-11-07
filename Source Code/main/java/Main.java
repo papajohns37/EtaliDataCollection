@@ -1,3 +1,4 @@
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
@@ -22,6 +23,7 @@ public class Main {
         System.out.println("What is your discord username?");
         String username = scanner.nextLine();
 
+        Configuration.browser = "chrome";
         Selenide.open("https://moxfield.com/decks/JhWK-MfmY0W1V5feboKLxQ/goldfish");
 
         while (true) {
