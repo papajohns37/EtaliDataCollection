@@ -4,10 +4,8 @@ import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.time.Duration;
+import java.util.*;
 
 import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.Condition.exist;
@@ -59,9 +57,37 @@ public class Main {
     }
 
     private static void refreshHand() {
-        $x("//*[text()='estart']").click();
-        $x("//*[text()='Restart']/..").click();
-        $x("//*[text()='Restart']").should(not(exist));
+//        try {
+//            $x("//*[text()='estart']").click();
+//            $x("//*[text()='Restart']/..").click();
+//            $x("//*[text()='Restart']").should(not(exist));
+//        }
+//        catch (Throwable e) {
+//
+//            //TODO: First try finding player then clicking restart
+//            Selenide.refresh();
+//            if($x("//*[text()='Discard']").is(exist, Duration.ofSeconds(3))){
+//                $x("//*[text()='Discard']/..").click();
+//                $x("//*[text()='Discard']").should(not(exist));
+//            }
+//        }
+
+        if($x("//*[text()='estart']").is(exist)){
+            $x("//*[text()='estart']").click();
+            $x("//*[text()='Restart']/..").click();
+            $x("//*[text()='Restart']").should(not(exist));
+        } else if($x("//*[text()='Actions']").is(exist)){
+            $x("//*[text()='Actions']").click();
+            $x("//a[text()='Restart']").click();
+            $x("//*[text()='Restart']/..").click();
+            $x("//*[text()='Restart']").should(not(exist));
+        } else {
+            Selenide.refresh();
+            if($x("//*[text()='Discard']").is(exist, Duration.ofSeconds(3))){
+                $x("//*[text()='Discard']/..").click();
+                $x("//*[text()='Discard']").should(not(exist));
+            }
+        }
     }
 
     private static List<List<Object>> getSheetsData(HandResults handResults, int handSize, String username, List<String> cardNames) {
